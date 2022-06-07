@@ -14,19 +14,19 @@ services:
 # occurrences of `30333` in this file with another value
       - "0.0.0.0:30333:30333"
     restart: unless-stopped
-#    command: [
-##      "--chain", "gemini-1",
-#      "--base-path", "/var/subspace",
-#      "--execution", "wasm",
- #     "--pruning", "archive",
- #     "--port", "30333",
- #     "--rpc-cors", "all",
-  #    "--rpc-methods", "safe",
-  #    "--unsafe-ws-external",
- #     "--validator",
+    command: [
+      "--chain", "gemini-1",
+      "--base-path", "/var/subspace",
+      "--execution", "wasm",
+      "--pruning", "archive",
+      "--port", "30333",
+      "--rpc-cors", "all",
+      "--rpc-methods", "safe",
+      "--unsafe-ws-external",
+      "--validator",
 # Replace `INSERT_YOUR_ID` with your node ID (will be shown in telemetry)
- #     "--name", "suntao234234123455"
-  #  ]
+      "--name", "suntao234234123455"
+    ]
     healthcheck:
       timeout: 5s
 # If node setup takes longer then expected, you want to increase `interval` and `retries` number.
